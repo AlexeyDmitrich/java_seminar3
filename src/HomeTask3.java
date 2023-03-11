@@ -57,7 +57,6 @@ public class HomeTask3 {
 
     public static double findMedian(ArrayList<Integer> usersList){
         usersList.sort(Comparator.naturalOrder());
-        System.out.println(usersList);
         int bigHalf = usersList.get(usersList.size()-1);
         int bigVal = usersList.get(usersList.size()-1);;
         int smallHalf = usersList.get(0);
@@ -75,14 +74,9 @@ public class HomeTask3 {
             if (smallVal < bigVal && smallHalf < bigHalf){
                 j--;
             }
-
-            System.out.println("B : "+ bigVal + "  \t S : " + smallVal + " ");
-            System.out.println("BH : "+ bigHalf + "  \t SH : " + smallHalf + " ");
+//            System.out.println("B : "+ bigVal + "  \t S : " + smallVal + " ");
+//            System.out.println("BH : "+ bigHalf + "  \t SH : " + smallHalf + " ");
         }
-
-//        System.out.println("B : "+ bigVal + "  \t S : " + smallVal + " ");
-//        System.out.println("BH : "+ bigHalf + "  \t SH : " + smallHalf + " ");
-
         double median = (double)(bigVal+smallVal)/2;
         return median;
     }
